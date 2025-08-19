@@ -1,9 +1,11 @@
+package br.com.conversormoeda;
+
 import java.util.Scanner;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
-public class Main {
-    private static final String API_KEY = "SUA_CHAVE_API"; // Substitua aqui pela sua chave da API
+public class ConversorApp {
+    private static final String API_KEY = "fb7bccb03431b69b73836c88"; 
     private static final Scanner scanner = new Scanner(System.in);
     private static final DecimalFormat df = new DecimalFormat("#,##0.00");
     
@@ -22,7 +24,7 @@ public class Main {
         boolean continuar = true;
         while (continuar) {
             exibirMenu();
-            int opcao = lerInteiro("Escolha uma opção válida: ");
+            int opcao = lerInteiro("");
             
             switch (opcao) {
                 case 1:
@@ -62,14 +64,15 @@ public class Main {
     }
     
     private static void exibirMenu() {
-        System.out.println("\n************************************************");
-        System.out.println("1) Dólar >>> Peso argentino");
-        System.out.println("2) Peso argentino >>> Dólar");
-        System.out.println("3) Dólar >>> Real brasileiro");
-        System.out.println("4) Real brasileiro >>> Dólar");
-        System.out.println("5) Dólar >>> Peso colombiano");
-        System.out.println("6) Peso colombiano >>> Dólar");
+        System.out.println("************************************************");
+        System.out.println("1) Dólar =>> Peso argentino");
+        System.out.println("2) Peso argentino =>> Dólar");
+        System.out.println("3) Dólar =>> Real brasileiro");
+        System.out.println("4) Real brasileiro =>> Dólar");
+        System.out.println("5) Dólar =>> Peso colombiano");
+        System.out.println("6) Peso colombiano =>> Dólar");
         System.out.println("7) Sair");
+        System.out.println("Escolha uma opção válida:");
         System.out.println("************************************************");
     }
     
